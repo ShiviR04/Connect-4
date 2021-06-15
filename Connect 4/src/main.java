@@ -52,7 +52,7 @@ public class main {
                 int rowCheck = -10;
                 if (location >= 0 && location <= 6) rowCheck = check.emptyCheck(board, red, yellow, empty, location);
                 if (rowCheck == -1) {
-                    while(rowCheck == 10 || rowCheck == -1){
+                    while(rowCheck == -10 || rowCheck == -1){
                         System.out.println("The column is full, enter another column: ");
                         location = scanner.nextInt();
                         rowCheck = check.emptyCheck(board, red, yellow, empty, location);
