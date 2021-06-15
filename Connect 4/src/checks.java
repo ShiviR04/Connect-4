@@ -7,10 +7,10 @@ public class checks {
         for (int row = 0; row < board.length; row++) {
             for (int column = 0; column < board[row].length - 3; column++) {
                 if ((board[row][column].equals(red)) && (board[row][column + 1].equals(red)) && (board[row][column + 2].equals(red)) && (board[row][column + 3].equals(red))) {
-                    System.out.println("Player 1  wins!");
+                    System.out.println("Player 1  wins! (Horizontal)");
                     return false;
-                } else if ((board[row][column].equals(yellow)) && (board[row][column].equals(yellow)) && (board[row][column + 2].equals(yellow)) && (board[row][column + 3].equals(yellow))) {
-                    System.out.println("Player 2  wins!");
+                } else if ((board[row][column].equals(yellow)) && (board[row][column + 1].equals(yellow)) && (board[row][column + 2].equals(yellow)) && (board[row][column + 3].equals(yellow))) {
+                    System.out.println("Player 2  wins! (Horizontal)");
                     return false;
                 }
             }
@@ -23,10 +23,10 @@ public class checks {
         for (int row = 0; row < board.length - 3; row++) {
             for (int column = 0; column < board[row].length; column++) {
                 if ((board[row][column].equals(red)) && (board[row + 1][column].equals(red)) && (board[row + 2][column].equals(red)) && (board[row + 3][column].equals(red))) {
-                    System.out.println("Player 1  wins!");
+                    System.out.println("Player 1  wins! (Vertical)");
                     return false;
                 } else if ((board[row][column].equals(yellow)) && (board[row + 1][column].equals(yellow)) && (board[row + 2][column].equals(yellow)) && (board[row + 3][column].equals(yellow))) {
-                    System.out.println("Player 2  wins!");
+                    System.out.println("Player 2  wins! (Vertical)");
                     return false;
                 }
             }
@@ -39,10 +39,10 @@ public class checks {
         for (int row = 0; row < board.length - 3; row++) {
             for (int column = 0; column < board[row].length - 3; column++) {
                 if ((board[row][column].equals(red)) && (board[row + 1][column + 1].equals(red)) && (board[row + 2][column + 2].equals(red)) && (board[row + 3][column + 3].equals(red))) {
-                    System.out.println("Player 1  wins!");
+                    System.out.println("Player 1  wins! (Downward Diagonal)");
                     return false;
                 } else if ((board[row][column].equals(yellow)) && (board[row + 1][column + 1].equals(yellow)) && (board[row + 2][column + 2].equals(yellow)) && (board[row + 3][column + 3].equals(yellow))) {
-                    System.out.println("Player 2  wins!");
+                    System.out.println("Player 2  wins! (Downward Diagonal)");
                     return false;
                 }
             }
@@ -55,10 +55,10 @@ public class checks {
         for (int row = 3; row < board.length; row++) {
             for (int column = 0; column < board[row].length - 3; column++) {
                 if ((board[row][column].equals(red)) && (board[row - 1][column + 1].equals(red)) && (board[row - 2][column + 2].equals(red)) && (board[row - 3][column + 3].equals(red))) {
-                    System.out.println("Player 1  wins!");
+                    System.out.println("Player 1  wins! (Upward Diagonal)");
                     return false;
                 } else if ((board[row][column].equals(yellow)) && (board[row - 1][column + 1].equals(yellow)) && (board[row - 2][column + 2].equals(yellow)) && (board[row - 3][column + 3].equals(yellow))) {
-                    System.out.println("Player 2  wins!");
+                    System.out.println("Player 2  wins! (Upward Diagonal)");
                     return false;
                 }
             }
@@ -77,7 +77,6 @@ public class checks {
         }
         return -1;
     }
-
 
     //TEMPORARY
     public static void display(String[][] board) {

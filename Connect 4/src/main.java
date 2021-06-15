@@ -52,9 +52,13 @@ public class main {
                 int rowCheck = -10;
                 if (location >= 0 && location <= 6) rowCheck = check.emptyCheck(board, red, yellow, empty, location);
                 if (rowCheck == -1) {
-                    System.out.println("The column is full, enter another column: ");
-                    location = scanner.nextInt();
-                } else if (rowCheck != -10){
+                    while(rowCheck == 10 || rowCheck == -1){
+                        System.out.println("The column is full, enter another column: ");
+                        location = scanner.nextInt();
+                        rowCheck = check.emptyCheck(board, red, yellow, empty, location);
+                    }
+                }
+                if (rowCheck != -10){
                     if (turn % 2 != 0) board[rowCheck][location] = red;
                     else if (turn % 2 == 0) board[rowCheck][location] = yellow;
                     piece = true;
